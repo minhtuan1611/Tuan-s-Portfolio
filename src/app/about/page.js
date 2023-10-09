@@ -1,8 +1,11 @@
 const About = () => {
   return (
     <>
-      <div>
-        <section id="profile" className="profile">
+      <div className="Aboutpage">
+        <header>
+          <h1>Minh Tuan Nguyen</h1>
+        </header>
+        <section id="profile">
           <h2>Profile 👨🏼‍🎓</h2>
           <p>
             International university student with a huge passion for creating

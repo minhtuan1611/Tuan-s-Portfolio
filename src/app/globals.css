@@ -6,6 +6,544 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+.Bqr {
+  background-color: #ead7bb;
+  font-family: sans-serif;
+  max-width: 100vh;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+input[type='color'] {
+  border: none;
+  width: 32.5%;
+  height: 40px;
+  border-radius: 3px;
+}
+
+input[type='color']::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+input[type='color']::-webkit-color-swatch-wrapper {
+  border: none;
+}
+a {
+  text-decoration: none;
+}
+
+.qr-text {
+  padding: 1rem;
+  display: block;
+  background: #181b29;
+  border-radius: 6px;
+  width: 100%;
+  margin: 0.5rem 0 1rem 0;
+  color: #fff;
+  outline: none;
+}
+
+.qr-text::placeholder {
+  color: #8b92b7;
+  font-weight: 500;
+}
+
+#qr-code {
+  height: 500px;
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #414866;
+}
+
+#qr-code img,
+#qr-code canvas {
+  max-width: 100% !important;
+  max-height: 100% !important;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sizes {
+  width: 32.5%;
+  height: 40px;
+  color: #fff;
+  background: #181b29;
+  border: 1px solid #414866;
+  outline: none;
+}
+
+.btn {
+  color: #fff;
+  max-width: 200px;
+  padding: 14px;
+  background: rgb(106, 43, 255);
+  border-radius: 4px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 500;
+  flex: 1;
+}
+
+.btn img {
+  width: 20px;
+  margin-left: 10px;
+}
+.share-btn {
+  margin-left: 0.7rem;
+}
+.action-container {
+  display: flex;
+  margin: 1rem 0;
+}
+
+@media (max-width: 512px) {
+  body {
+    max-width: 100%;
+    padding: 10px;
+  }
+  #qr-code {
+    width: 95vw;
+    height: 95vw;
+  }
+  #qr-code img,
+  #qr-code canvas {
+    max-width: 95vw !important;
+    max-height: 95vw !important;
+  }
+
+  .btn {
+    min-width: unset;
+  }
+}
+@media (max-width: 350px) {
+  .action-container {
+    flex-direction: column;
+  }
+  .share-btn {
+    margin-left: 0;
+    margin-top: 0.7rem;
+  }
+}
+
+/* this is ccss file of Food Recipe   this is ccss file of Food Recipe*/
+.BFrecipe {
+  background-color: #f0f0f0;
+}
+.HFrecipe {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 20px 30px;
+}
+.BFrecipe h1 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+}
+
+.search input {
+  padding: 10px;
+  border: none;
+  width: 40%;
+  font-size: 15px;
+  outline: none;
+  border-radius: 10px 0 0 10px;
+}
+
+.search button {
+  padding: 10px 20px;
+  background-color: #ff5722;
+  border: none;
+  width: 10%;
+  cursor: pointer;
+  font-size: 15px;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 0 10px 10px 0;
+  transition: all 0.3s ease;
+}
+
+.search button:hover {
+  background-color: #e64a19;
+}
+
+.meal-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px;
+}
+
+.meal-item {
+  flex-basis: calc(25% - 20px);
+  max-width: calc(25% - 20px);
+  margin: 10px;
+  padding: 20px 20px 10px;
+  box-shadow: 0 8px 24px rgba(149, 157, 165, 0.2);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.meal-item:hover {
+  transform: scale(1.05);
+}
+
+.meal-item img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.meal-item h3 {
+  text-align: center;
+  margin: 10px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.modal-container {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  max-width: 90%;
+  overflow: auto;
+  border-radius: 10px;
+}
+
+.modal-container .close-button {
+  font-size: 42px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  width: 100%;
+  text-align: right;
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+}
+
+.modal-container .close-button:hover {
+  color: #ff5722;
+}
+
+.meal-details-content {
+  overflow-y: auto;
+  max-height: 70vh;
+}
+
+.recipe-title {
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.recipe-category {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.recipe-instruct h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.recipe-instruct p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-align: justify;
+  padding: 18px;
+}
+
+.recipe-img img {
+  max-width: 50%;
+  display: block;
+  margin: 0 auto 40px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+}
+
+.recipe-video {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.recipe-video a {
+  padding: 10px 20px;
+  background-color: #ff5722;
+  border: none;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.recipe-img a:hover {
+  background-color: #e64a19;
+}
+
+/* this is side baar file this is side baar css file this is side baar css file  */
+.Bsidebar {
+  margin: 0;
+  background-color: #ffe4c4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.Bsidebar button {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.sidebar {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 75px;
+  height: 100%;
+  background: #cedebd;
+  transition: all 0.4s;
+}
+/* 
+asdfasdfsdfsdfasfdsfsadfsdffjffjjffjjffjjfffjfffjjfjjfjfjjfjfjfjfjfjfffjjfjf
+.Bsidebar.open .sidebar {
+  width: 240px;
+} */
+
+.sidebar {
+  width: 240px;
+}
+
+.sidebar-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+}
+
+.Aboutpage header {
+  background-color: #c6d34c;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  height: 68px;
+  padding: 0 1.25rem 0 0;
+  background: #9eb384;
+  border-left: 3px solid transparent;
+  transition: 0.4s;
+}
+
+.sidebar-header:hover {
+  border-left: 3px solid #435334;
+}
+
+.sidebar-burger {
+  width: 70px;
+  height: 70px;
+  display: grid;
+  place-items: center;
+}
+
+.sidebar-burger > i,
+body.open .sidebar-burger > i {
+  font-size: 25px;
+  color: black;
+  transition: all 0.4s;
+}
+
+.sidebar-burger:hover > i,
+body.open .sidebar-burger:hover > i {
+  color: rgb(200, 139, 63);
+}
+
+.sidebar-logo {
+  width: 150px;
+  height: 150px;
+  opacity: 0;
+  transition: all 0.4s;
+}
+/* cho nay nua cac baan oiiiiiiiiiiiiiiiiiiiiiiiiiiiii */
+body.open .sidebar-logo {
+  opacity: 1;
+  transition: all 0.4s;
+}
+
+.sidebar-menu > button {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  height: 55px;
+  font-family: 'Ubuntu';
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 1;
+  padding: 0 22px;
+  border-left: 3px solid transparent;
+  transition: all 0.4s;
+}
+
+.sidebar-menu > button:hover {
+  border-left: 3px solid #435334;
+}
+
+.sidebar-menu > button.has-border {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #435334;
+  margin-bottom: 1rem;
+}
+
+.sidebar-menu > button > i {
+  font-size: 25px;
+  color: #435334;
+  transition: all 0.4s;
+}
+
+.sidebar-menu > button:hover > i,
+.sidebar-menu > button:hover > span {
+  color: rgb(200, 139, 63);
+}
+
+/* .sidebar-menu > button > span {
+  opacity: 0;
+  transition: all 0.4s;
+} */
+/* cuu mtuan cho nay voi cac ban oi ssssssssssasdfasfsdfsdfasdfsdfdsa */
+body.open .sidebar-menu > button > span {
+  opacity: 1;
+  transition: 0.4s;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.technologies {
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 1200px;
+}
+
+.technologies h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  align-items: center;
+}
+
+.technologies h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  align-items: center;
+}
+
+.technologies ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 400;
+  align-items: center;
+}
+
+.technologies ul li {
+  margin-bottom: 5px;
+  text-align: center;
+  align-items: center;
+}
+
+.Aboutpage img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.Aboutpage section {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.Aboutpage h1,
+.Aboutpage h2 {
+  color: #333;
+  font-family: 'Arial Black', sans-serif;
+  text-align: center;
+}
+
+.Aboutpage p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 10px 0;
+}
+
+.Aboutpage li {
+  margin-bottom: 5px;
+}
+.Aboutpage ul {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 20px;
+}
+.Aboutpage date {
+  opacity: 0.7;
+  font-size: 14px;
+}
 
 .contact {
   position: relative;
@@ -142,32 +680,18 @@
     width: 100%;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Inclusive+Sans:ital@0;1&family=Lugrasimo&family=Poppins:ital,wght@0,300;0,400;0,700;1,200;1,500&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400&display=swap');
-
 html {
   scroll-behavior: smooth;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Raleway', sans-serif;
-}
-
-body {
-  font-size: 14px;
-}
-
-header {
+.mainpage {
   width: 100%;
   height: 100vh;
   background-color: #ffe4c4;
   color: rgb(54, 105, 54);
 }
 
-header #particles {
+.mainpage #particles {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -175,7 +699,7 @@ header #particles {
   left: 0;
 }
 
-header .info-text {
+.mainpage .info-text {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -184,17 +708,17 @@ header .info-text {
   height: 100vh;
 }
 
-header .info-text h1 {
+.mainpage .info-text h1 {
   font-size: 5rem;
   font-weight: 500;
   font-family: 'Ubuntu';
 }
 
-header .info-text h3 {
+.mainpage .info-text h3 {
   font-size: 1.5rem;
 }
 
-header .info-text .scroll {
+.mainpage .info-text .scroll {
   position: absolute;
   bottom: 20%;
   left: 50%;
@@ -203,11 +727,11 @@ header .info-text .scroll {
   transition: all 0.5s;
 }
 
-header .info-text .scrol:hover {
+.mainpage .info-text .scrol:hover {
   opacity: 0.7;
 }
 
-header .info-text .scroll::before {
+.mainpage .info-text .scroll::before {
   position: absolute;
   top: -16px;
   left: -16px;

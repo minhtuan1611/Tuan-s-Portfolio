@@ -4,7 +4,6 @@ import Link from 'next/link'
 import Particles from 'react-particles'
 import { loadSlim } from 'tsparticles-slim'
 import { useCallback } from 'react'
-
 export default function Home() {
   const particlesInit = useCallback(async (engine) => {
     console.log(engine)
@@ -17,7 +16,7 @@ export default function Home() {
 
   return (
     <main>
-      <header>
+      <header className="mainpage">
         {/* <Particles
           id="tsparticles"
           init={particlesInit}
@@ -148,12 +147,10 @@ export default function Home() {
                 experiences. Let us take a look!
               </p>
               <div className="header">
-                <a
-                  href="../Create Sidebar/index.html"
-                  style={{ color: 'rgb(12, 11, 11)' }}
-                >
-                  See amazing projects
-                </a>
+                <Link href="/sidebar" style={{ color: 'rgb(12, 11, 11)' }}>
+                  {' '}
+                  See amazing projects!
+                </Link>
               </div>
             </div>
           </div>

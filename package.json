@@ -10,9 +10,11 @@
   },
   "dependencies": {
     "next": "13.5.4",
+    "qrcode": "^1.5.3",
     "react": "^18",
     "react-dom": "^18",
     "react-particles": "^2.12.2",
+    "styled-components": "^6.0.8",
     "tsparticles-slim": "^2.12.0"
   },
   "devDependencies": {
