@@ -1,13 +1,27 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const router = useRouter()
 
   const toggleSidebar = () => {
-    setIsOpen(!isOpen)
+    setIsOpen((cur) => !cur)
   }
+
+  // const toggleSidebar = () => document.body.classList.toggle('open')
+
+  useEffect(() => {
+    const link = document.createElement('link')
+    link.href = 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
+    link.rel = 'stylesheet'
+    document.head.appendChild(link)
+    return () => {
+      document.head.removeChild(link)
+    }
+  }, [])
   return (
     <>
       <div className={`Bsidebar ${isOpen ? 'open' : ''}`}>
@@ -25,15 +39,11 @@ const Sidebar = () => {
                 {/* <img src="logo.png" alt="" className="sidebar-logo" /> */}
               </header>
               <nav className="sidebar-menu">
-                <Link href="/" style={{ color: 'rgb(12, 11, 11)' }}>
-                  <i className="bx bx-home-smile" />
-                  <span>Home</span>
-                </Link>
-                <Link href="/Food_recipe" style={{ color: 'rgb(12, 11, 11)' }}>
-                  <i className="bx bx-home-smile" />
-                  <span>Food Reicpe</span>
-                </Link>
-                <button type="button" id="home">
+                <button
+                  type="button"
+                  id="home"
+                  onClick={() => router.push('/')}
+                >
                   <i className="bx bx-home-smile" />
                   <span>Home</span>
                 </button>

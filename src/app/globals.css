@@ -9,7 +9,7 @@
 .Bqr {
   background-color: #ead7bb;
   font-family: sans-serif;
-  max-width: 100vh;
+  max-width: 2000px;
   height: 100vh;
   margin: 0 auto;
   display: flex;
@@ -82,10 +82,10 @@ a {
 }
 
 .btn {
-  color: #fff;
+  color: black;
   max-width: 200px;
   padding: 14px;
-  background: rgb(106, 43, 255);
+  background-color: #008170;
   border-radius: 4px;
   border: none;
   display: flex;
@@ -95,6 +95,14 @@ a {
   font-size: 1.1rem;
   font-weight: 500;
   flex: 1;
+  margin: 0 auto;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0f0f0f;
+  color: #008170;
 }
 
 .btn img {
@@ -348,7 +356,7 @@ asdfasdfsdfsdfasfdsfsadfsdffjffjjffjjffjjfffjfffjjfjjfjfjjfjfjfjfjfjfffjjfjf
   width: 240px;
 } */
 
-.sidebar {
+.open .sidebar {
   width: 240px;
 }
 
@@ -388,14 +396,14 @@ asdfasdfsdfsdfasfdsfsadfsdffjffjjffjjffjjfffjfffjjfjjfjfjjfjfjfjfjfjfffjjfjf
 }
 
 .sidebar-burger > i,
-body.open .sidebar-burger > i {
+.open .sidebar-burger > i {
   font-size: 25px;
   color: black;
   transition: all 0.4s;
 }
 
 .sidebar-burger:hover > i,
-body.open .sidebar-burger:hover > i {
+.open .sidebar-burger:hover > i {
   color: rgb(200, 139, 63);
 }
 
@@ -406,7 +414,7 @@ body.open .sidebar-burger:hover > i {
   transition: all 0.4s;
 }
 /* cho nay nua cac baan oiiiiiiiiiiiiiiiiiiiiiiiiiiiii */
-body.open .sidebar-logo {
+.open .sidebar-logo {
   opacity: 1;
   transition: all 0.4s;
 }
@@ -447,12 +455,12 @@ body.open .sidebar-logo {
   color: rgb(200, 139, 63);
 }
 
-/* .sidebar-menu > button > span {
+.sidebar-menu > button > span {
   opacity: 0;
   transition: all 0.4s;
-} */
-/* cuu mtuan cho nay voi cac ban oi ssssssssssasdfasfsdfsdfasdfsdfdsa */
-body.open .sidebar-menu > button > span {
+}
+
+.open .sidebar-menu > button > span {
   opacity: 1;
   transition: 0.4s;
 }

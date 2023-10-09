@@ -1,9 +1,18 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const Contact = () => {
   const [email, setEmail] = useState('')
+  useEffect(() => {
+    const link = document.createElement('link')
+    link.href = 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
+    link.rel = 'stylesheet'
+    document.head.appendChild(link)
+    return () => {
+      document.head.removeChild(link)
+    }
+  }, [])
   return (
     <>
       <section className="contact">
