@@ -30,11 +30,11 @@ export default function Home() {
 
           <Link href="/contact" style={{ color: 'rgb(12, 11, 11)' }}>
             {' '}
-            We Hire you!
+            Please hire me
           </Link>
         </div>
         <div className="card">
-          <Image src="/assets/logo.png" alt="logo" width={200} height={200} />
+          <Image src="/logo.png" alt="logo" width={200} height={200} />
           <div className="info">
             <h1>Hi, Happy to se you here</h1>
             <p>
@@ -44,10 +44,13 @@ export default function Home() {
               mastering both front-end and back-end technologies to create
               engaging web experiences.
             </p>
-            <div className="header">
+            <div
+              className="header"
+              style={{ margin: '20px', fontSize: '14px' }}
+            >
               <Link href="/about" style={{ color: 'rgb(12, 11, 11)' }}>
                 {' '}
-                Know more!
+                Know more
               </Link>
             </div>
           </div>
@@ -75,7 +78,10 @@ export default function Home() {
                 talent for translating thoughts into interactive web
                 experiences. Let us take a look!
               </p>
-              <div className="header">
+              <div
+                className="header"
+                style={{ margin: '20px', fontSize: '14px' }}
+              >
                 <Link href="/sidebar" style={{ color: 'rgb(12, 11, 11)' }}>
                   {' '}
                   See amazing projects!

@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image'
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -10,8 +11,6 @@ const Sidebar = () => {
   const toggleSidebar = () => {
     setIsOpen((cur) => !cur)
   }
-
-  // const toggleSidebar = () => document.body.classList.toggle('open')
 
   useEffect(() => {
     const link = document.createElement('link')
@@ -36,7 +35,13 @@ const Sidebar = () => {
                 >
                   <i className="bx bx-menu" />
                 </button>
-                {/* <img src="logo.png" alt="" className="sidebar-logo" /> */}
+                <Image
+                  src="/logo.png"
+                  alt=""
+                  className="sidebar-logo"
+                  height={200}
+                  width={200}
+                />
               </header>
               <nav className="sidebar-menu">
                 <button
@@ -47,26 +52,43 @@ const Sidebar = () => {
                   <i className="bx bx-home-smile" />
                   <span>Home</span>
                 </button>
-                <button type="button" id="profile">
+                <button
+                  type="button"
+                  id="profile"
+                  onClick={() => router.push('/about')}
+                >
                   <i className="bx bx-user" />
                   <span>My profile</span>
                 </button>
-                <button type="button" id="qrcode">
+                <button
+                  type="button"
+                  id="qrcode"
+                  onClick={() => router.push('/qr_generator')}
+                >
                   <i className="bx bx-cog" />
                   <span>QR Generator</span>
                 </button>
-                <button type="button" id="recipeButton">
+                <button
+                  type="button"
+                  id="recipeButton"
+                  onClick={() => router.push('/Food_recipe')}
+                >
                   <i className="bx bx-baguette" />
                   <span>Food Recipe</span>
                 </button>
-                <button type="button">
+                <button
+                  type="button"
+                  onClick={() =>
+                    router.push('https://bee-healthier.onrender.com/')
+                  }
+                >
                   <i className="bx bx-calculator" />
-                  <span>Calories Caculator</span>
+                  <span>Bee Healthier</span>
                 </button>
-                <button type="button">
+                {/* <button type="button">
                   <i className="bx bx-list-check" />
                   <span>Schedule</span>
-                </button>
+                </button> */}
               </nav>
             </div>
           </nav>

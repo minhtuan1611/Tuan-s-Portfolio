@@ -34,10 +34,7 @@ const Contact = () => {
               </div>
               <div className="text">
                 <h3>Address</h3>
-                <p>
-                  Lahti, Finland, <br />
-                  15110
-                </p>
+                <p>15110 Lahti, Finland</p>
               </div>
             </div>
             <div className="box">
