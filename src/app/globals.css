@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Inclusive+Sans:ital@0;1&family=Lugrasimo&family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,100;1,200;1,500&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
 .Bqr {
   background-color: #ead7bb;
   font-family: sans-serif;
@@ -120,7 +114,6 @@ a {
 @media (max-width: 512px) {
   body {
     max-width: 100%;
-    padding: 10px;
   }
   #qr-code {
     width: 95vw;
@@ -136,6 +129,7 @@ a {
     min-width: unset;
   }
 }
+
 @media (max-width: 350px) {
   .action-container {
     flex-direction: column;
@@ -146,7 +140,6 @@ a {
   }
 }
 
-/* this is ccss file of Food Recipe   this is ccss file of Food Recipe*/
 .BFrecipe {
   background-color: #f0f0f0;
 }
@@ -324,7 +317,6 @@ a {
   background-color: #e64a19;
 }
 
-/* this is side baar file this is side baar css file this is side baar css file  */
 .Bsidebar {
   margin: 0;
   background-color: #ffe4c4;
@@ -350,12 +342,6 @@ a {
   background: #cedebd;
   transition: all 0.4s;
 }
-/* 
-asdfasdfsdfsdfasfdsfsadfsdffjffjjffjjffjjfffjfffjjfjjfjfjjfjfjfjfjfjfffjjfjf
-.Bsidebar.open .sidebar {
-  width: 240px;
-} */
-
 .open .sidebar {
   width: 240px;
 }
@@ -413,7 +399,7 @@ asdfasdfsdfsdfasfdsfsadfsdffjffjjffjjffjjfffjfffjjfjjfjfjjfjfjfjfjfjfffjjfjf
   opacity: 0;
   transition: all 0.4s;
 }
-/* cho nay nua cac baan oiiiiiiiiiiiiiiiiiiiiiiiiiiiii */
+
 .open .sidebar-logo {
   opacity: 1;
   transition: all 0.4s;
@@ -587,7 +573,7 @@ asdfasdfsdfsdfasfdsfsadfsdffjffjjffjjffjjfffjfffjjfjjfjfjjfjfjfjfjfjfffjjfjf
 }
 .container .contactInfo {
   max-width: 750px;
-  /* width: 40%; */
+
   display: flex;
   flex-direction: column;
   margin-bottom: 40px;
@@ -610,12 +596,9 @@ asdfasdfsdfsdfasfdsfsadfsdffjffjjffjjffjjfffjfffjjfjjfjfjjfjfjfjfjfjfffjjfjf
   font-size: 22px;
 }
 .container .contactInfo .box .text {
-  /* display: flex; */
   text-align: left;
   margin-left: 20px;
   font-size: 16px;
-  /* flex-direction: column; */
-  font-weight: 300;
 }
 
 .container .contactInfo .box .text h3 {
@@ -691,6 +674,14 @@ asdfasdfsdfsdfasfdsfsadfsdffjffjjffjjffjjfffjfffjjfjjfjfjjfjfjfjfjfjfffjjfjf
     width: 100%;
   }
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -883,11 +874,11 @@ html {
   font-size: 1.1rem;
 }
 @media screen and (max-width: 720px) {
-  header .info-text h1 {
+  .mainpage .info-text h1 {
     font-size: 4rem;
   }
 
-  header .info-text h3 {
+  .mainpage .info-text h3 {
     font-size: 1.1rem;
   }
 
