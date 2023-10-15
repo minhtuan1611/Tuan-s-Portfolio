@@ -11,6 +11,7 @@ export default function Home() {
     return () => {
       document.head.removeChild(link)
     }
+    // eslint-disable-next-line
   }, [])
 
   return (
