@@ -96,13 +96,14 @@ export default function Home() {
               <h1>Skills</h1>
               <ul className="skills-list">
                 <li>Node.js</li>
-                <li>JavaScript</li>
+                <li>TypeScript</li>
+                <li>ReactJS</li>
+                <li>Docker</li>
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>MongoDB</li>
                 <li>Wordpress</li>
                 <li>Python</li>
-                <li>Front-end Framework: React</li>
               </ul>
               <p className="skills-description">
                 I possess a diverse skill set encompassing various technologies
