@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Tuan's Portfolio
 
-First, run the development server:
+## Overview
+
+Tuan's Portfolio is a showcase of my web development projects, skills, and experience. It is built using Next.js and is designed to highlight my work in an organized and visually appealing manner.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Folder Structure](#folder-structure)
+- [Development](#development)
+- [Deployment](#deployment)
+- [License](#license)
+
+## Installation
+
+To run this project locally, follow these steps:
 
 ```bash
+# Clone the repository
+git clone https://github.com/your-username/tuan-s-portfolio.git
+
+# Change directory
+cd tuan-s-portfolio
+
+# Install dependencies
+npm install
+
+# Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Usage
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Visit [Tuan's Portfolio](https://tuan-s-portfolio.vercel.app/) to explore my projects and get to know more about me.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Features
 
-## Learn More
+- **Responsive Design**: The portfolio is designed to be responsive and accessible on various devices.
+- **Projects Showcase**: Browse through my showcased projects with detailed descriptions.
+- **Contact Form**: Reach out to me easily using the contact form.
 
-To learn more about Next.js, take a look at the following resources:
+## Technologies Used
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Folder Structure
 
-## Deploy on Vercel
+```
+tuan-s-portfolio/
+|-- public/
+|-- src/
+|   |-- components/
+|   |-- pages/
+|   |-- styles/
+|-- .gitignore
+|-- next.config.js
+|-- package.json
+|-- README.md
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Development
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+For developers looking to contribute, feel free to fork the repository and submit pull requests.
+
+## Deployment
+
+The portfolio is deployed and can be accessed at [https://tuan-s-portfolio.vercel.app/](https://tuan-s-portfolio.vercel.app/).
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
